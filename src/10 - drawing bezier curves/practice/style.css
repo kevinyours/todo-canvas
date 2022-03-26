@@ -1,0 +1,10 @@
+
+
+#bezier-curves-canvas{
+  border: 1px solid black;
+  /* center align */
+  display: block;
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+}

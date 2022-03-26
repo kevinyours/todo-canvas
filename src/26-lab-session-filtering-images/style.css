@@ -1,0 +1,10 @@
+
+
+#image-filter-canvas{
+  border: 1px solid black;
+  /* center align */
+  display: block;
+  width: 900px;
+  height: 450px;
+  margin: 0 auto;
+}
