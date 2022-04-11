@@ -1,0 +1,10 @@
+
+
+
+
+#positioning-texts-canvas{
+  border: 1px solid black;
+  /* center align */
+  display: block;
+  margin: 0 auto;
+}
