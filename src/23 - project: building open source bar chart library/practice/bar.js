@@ -246,7 +246,9 @@ BarChart.prototype.drawHorizontalLabels = function () {
   // Draw labels
   for (var i = 0; i < chart.itemsNum; i++) {
     var horizontalLabelX =
-      i * chart.horizontalLabelFreq + chart.horizontalLabelFreq;
+      chart.horizontalMargin +
+      i * chart.horizontalLabelFreq +
+      chart.horizontalLabelFreq / 2;
     var horizontalLabelY =
       chart.height -
       chart.verticalMargin +
@@ -328,9 +330,14 @@ BarChart.prototype.drawBars = function () {
 
     chart.context.beginPath();
 
-    var barX = chart.horizontalMargin + i * chart.horizontalLabelFreq;
+    var barX =
+      chart.horizontalMargin +
+      i * chart.horizontalLabelFreq +
+      chart.horizontalLabelFreq / chart.axisRatio;
     var barY = chart.height - chart.verticalMargin;
-    var barWidth = chart.horizontalLabelFreq;
+    var barWidth =
+      chart.horizontalLabelFreq -
+      (2 * chart.horizontalLabelFreq) / chart.axisRatio;
     var barHeight =
       (-1 * (chart.verticalAxisWidth * chart.values[i])) / chart.maxValue;
 
