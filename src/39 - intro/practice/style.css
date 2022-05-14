@@ -1,0 +1,10 @@
+
+
+#intro-canvas{
+  border: 1px solid black;
+  /* center align */
+  display: block;
+  width: 900px;
+  height: 600px;
+  margin: 0 auto;
+}
